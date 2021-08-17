@@ -2,13 +2,10 @@ import _ from 'lodash';
 import './style.css';
 
 function component() {
-  const element = document.createElement('div');
-
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
-  
-  return element;
+  const listContainer = document.querySelector('.list-container');
+  const listElement = document.createElement('li');
+  listElement.innerHTML = 'hello';
+  listContainer.appendChild(listElement);
 }
 
-document.body.appendChild(component());
+component();
