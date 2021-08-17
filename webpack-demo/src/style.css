@@ -14,6 +14,20 @@ li {
   align-items: center
 }
 
+.header-container {
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+#submit-new-item {
+  margin-left: auto;
+}
+
+#refresh {
+  margin-left: auto;
+}
+
 .list-container {
   width: 50%;
   border: 1px solid black;
@@ -21,6 +35,10 @@ li {
 
 .add-new {
   padding: 1px;
+}
+
+.form {
+  display: flex;
 }
 
 .list-items {
@@ -31,4 +49,20 @@ li {
   display: flex;
   flex-direction: row;
   align-items: center
+}
+
+.move-button {
+  margin-left: auto;
+  height: 20px;
+  width: 20px;
+}
+
+.description {
+  margin: 0px 10px;
+}
+
+.form-check {
+  padding: 0;
+  display: flex;
+  margin: 5px 10px;
 }
