@@ -1,3 +1,34 @@
 body {
-  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+.list-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center
+}
+
+.list-container {
+  width: 50%;
+  border: 1px solid black;
+}
+
+.add-new {
+  padding: 1px;
+}
+
+.list-items {
+  padding: 1px;
+}
+
+.list-element {
+  display: flex;
+  flex-direction: row;
+  align-items: center
 }
