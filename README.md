@@ -1,65 +1,45 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Book Storage App
 
-# Project Name
-
-> One paragraph statement about the project.
+> Website to storage your favorite books.
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML-CSS-JAVASCRIPT-WEBPACK
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Visit Live Demo Link](https://felipeg005.github.io/To-Do-List-ES6/)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple example steps
 
 ### Prerequisites
 
-### Setup
-
-### Install
+- Browser (Chrome,Firefoxe,IE,Opera,Safari)
 
 ### Usage
 
-### Run tests
-
-### Deployment
+- Open Html.index file with your browser
 
 
+👤 **Author**
 
-## Authors
+**Juan Felipe Gomez Tobon**
 
-👤 **Author1**
+- GitHub: [@githubhandle](https://github.com/Felipeg005/)
+- Twitter: [@twitterhandle](https://twitter.com/JuanFGT05)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/juan-felipe-gomez-tobon/)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Ngenzi Herve**
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
+- Website: [Visit](https://ngenziherve.me)
+- Github: [@muhenge](https://github.com/muhenge)
+- LinkedIn: [Visit](https://www.linkedin.com/in/mugunga-herve-a62a0ab9/)
 
 ## Show your support
 
@@ -67,9 +47,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Thanks to Microverse for make it possible!
+- Thanks to the minimalist project.
 
 ## 📝 License
 
