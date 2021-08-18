@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-use-before-define
 import _ from 'lodash';
 import './style.css';
 import optionsIcon from './imgs/app_screenshot.png';
@@ -22,7 +23,8 @@ function add() {
 document.getElementById('form').addEventListener('submit', add);
 
 function load() {
-  if (!(listArray = JSON.parse(localStorage.getItem('taskStorage')))) { // eslint-disable-line no-use-before-define
+  // eslint-disable-next-line no-use-before-define
+  if (!(listArray = JSON.parse(localStorage.getItem('taskStorage')))) {
     listArray = [{
       description: 'Take a walk with the dog',
       completed: false,
