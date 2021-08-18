@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-use-before-define
-import _ from 'lodash';
+/* eslint-disable-line */import _ from 'lodash';
 import './style.css';
 import optionsIcon from './imgs/app_screenshot.png';
 import refreshIcon from './imgs/1024px-Refresh_icon.png';
@@ -23,7 +22,8 @@ function add() {
 document.getElementById('form').addEventListener('submit', add);
 
 function load() {
-  if ((listArray = JSON.parse(localStorage.getItem('taskStorage')))===null) {
+/* eslint-disable-next-line */
+  if (!(listArray = JSON.parse(localStorage.getItem('taskStorage')))) {
     listArray = [{
       description: 'Take a walk with the dog',
       completed: false,
