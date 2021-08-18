@@ -10,19 +10,22 @@
   <ul class="header-container">
     <li class="list-header">
       <h2 class="list-title">Today's To Do</h2>
-      <div id="refresh">refresh btn</div>
+      <div id="refresh"></div>
     </li>
   </ul>
   <div class="list-container">
   <ul class="add-new">
     <li>
-      <form class="form">
+      <form id="form" class="form">
         <input id="new-item" placeholder="Add to your list..." type="text">
-        <input id="submit-new-item" type="submit" value title="click this or press enter to submit">
+        <button class="enter-btn" type="submit"></button>
       </form>
     </li>
   </ul>
     <ul class="list-items"></ul>
+    <div class="button-container">
+    <button type="button" class="clear-btn">Clear all completed</button>
+    </div>
   </div>
 </body>
 </html>

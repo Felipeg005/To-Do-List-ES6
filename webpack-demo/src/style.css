@@ -4,51 +4,113 @@ body {
   align-items: center;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 li {
   list-style-type: none;
+}
+
+.hide {
+  display: none;
+}
+
+input::placeholder {
+  color: rgb(148, 148, 148);
 }
 
 .list-header {
   display: flex;
   flex-direction: row;
-  align-items: center
+  align-items: center;
+}
+
+.list-title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 17px;
 }
 
 .header-container {
   width: 50%;
-  margin: 0;
-  padding: 0;
+  margin: 40px 0px 0px 0px;
+  padding: 10px;
+  border: 1px solid rgb(211, 211, 211);
+  
 }
 
-#submit-new-item {
+/* #submit-new-item {
   margin-left: auto;
+} */
+
+.enter-btn {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.enter-btn:hover {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.enter-img {
+  width: 12px;
+  height: 12px;
 }
 
 #refresh {
   margin-left: auto;
 }
 
+#refresh > img {
+  height: 20px;
+  width: 20px;
+}
+
 .list-container {
   width: 50%;
-  border: 1px solid black;
+  border: 1px solid rgb(211, 211, 211)
 }
 
 .add-new {
-  padding: 1px;
+  padding: 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid rgb(211, 211, 211);
 }
 
 .form {
   display: flex;
+  padding: 15px 10px;
+  line-height: 20px;
+  margin-top: 3px;
+}
+
+#new-item,
+#new-item:hover,
+#new-item:focus {
+  margin-left: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-style: italic;
 }
 
 .list-items {
-  padding: 1px;
+  padding: 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid rgb(211, 211, 211);
 }
 
 .list-element {
   display: flex;
   flex-direction: row;
-  align-items: center
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid rgb(211, 211, 211);
 }
 
 .move-button {
@@ -58,11 +120,37 @@ li {
 }
 
 .description {
-  margin: 0px 10px;
+  padding: 15px 0px;
+  line-height: 20px;
+  margin-top: 3px;
+  color: black;
 }
 
 .form-check {
   padding: 0;
   display: flex;
-  margin: 5px 10px;
+  margin: 0px 10px;
 }
+
+.button-container {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(246,246,246);
+}
+
+.button-container:active {
+  background-color: rgb(221, 220, 220);
+}
+
+.clear-btn,
+.clear-btn:hover {
+  border: none;
+  background-color: transparent;
+  color: rgb(148, 148, 148);
+  width: 100%;
+  outline: none;
+}
+
