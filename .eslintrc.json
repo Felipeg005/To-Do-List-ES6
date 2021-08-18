@@ -14,10 +14,8 @@
     "no-shadow": "off",
     "no-param-reassign": "off",
     "eol-last": "off",
-    "import/no-unresolved": [
-      2, 
-      { "caseSensitive": false }
-   ]
+    "import/no-unresolved": "off",
+    "import/extensions": "off"
   },
   "ignorePatterns": [
     "dist/",

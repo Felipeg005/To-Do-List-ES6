@@ -23,8 +23,7 @@ function add() {
 document.getElementById('form').addEventListener('submit', add);
 
 function load() {
-  // eslint-disable-next-line no-use-before-define
-  if (!(listArray = JSON.parse(localStorage.getItem('taskStorage')))) {
+  if ((listArray = JSON.parse(localStorage.getItem('taskStorage')))===null) {
     listArray = [{
       description: 'Take a walk with the dog',
       completed: false,
