@@ -1,45 +1,65 @@
-# Book Storage App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-> Website to storage your favorite books.
+# Project Name
+
+> One paragraph statement about the project.
 
 ![screenshot](./app_screenshot.png)
 
+Additional description about the project and its features.
 
 ## Built With
 
-- HTML-CSS-JAVASCRIPT-WEBPACK
+- Major languages
+- Frameworks
+- Technologies used
 
 ## Live Demo
 
-[Visit Live Demo Link](https://felipeg005.github.io/To-Do-List-ES6/)
+[Live Demo Link](https://livedemo.com)
 
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps
+**This is an example of how you may give instructions on setting up your project locally.**
+**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+
+
+To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-- Browser (Chrome,Firefoxe,IE,Opera,Safari)
+### Setup
+
+### Install
 
 ### Usage
 
-- Open Html.index file with your browser
+### Run tests
+
+### Deployment
 
 
-👤 **Author**
 
-**Juan Felipe Gomez Tobon**
+## Authors
 
-- GitHub: [@githubhandle](https://github.com/Felipeg005/)
-- Twitter: [@twitterhandle](https://twitter.com/JuanFGT05)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/juan-felipe-gomez-tobon/)
+👤 **Author1**
 
-👤 **Ngenzi Herve**
+- GitHub: [@githubhandle](https://github.com/githubhandle)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
-- Website: [Visit](https://ngenziherve.me)
-- Github: [@muhenge](https://github.com/muhenge)
-- LinkedIn: [Visit](https://www.linkedin.com/in/mugunga-herve-a62a0ab9/)
+👤 **Author2**
+
+- GitHub: [@githubhandle](https://github.com/githubhandle)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
 
 ## Show your support
 
@@ -47,8 +67,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Thanks to Microverse for make it possible!
-- Thanks to the minimalist project.
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
 
 ## 📝 License
 
