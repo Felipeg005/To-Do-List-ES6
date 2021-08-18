@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 import _ from 'lodash';
 import './style.css';
 import optionsIcon from './imgs/app_screenshot.png';
@@ -9,12 +10,12 @@ let listArray = [];
 // Add new task
 
 function add() {
-  let newInput = document.getElementById('new-item');
-  let newTask = {
+  const newInput = document.getElementById('new-item');
+  const newTask = {
     description: `${newInput.value}`,
     completed: false,
     index: listArray.length + 1,
-  } 
+  };
   listArray.push(newTask);
   localStorage.setItem('taskStorage', JSON.stringify(listArray));
 }
@@ -22,6 +23,7 @@ function add() {
 document.getElementById('form').addEventListener('submit', add);
 
 function load() {
+  // eslint-disable-next-line no-undef
   if (!(listArray = JSON.parse(localStorage.getItem('taskStorage')))) {
     listArray = [{
       description: 'Take a walk with the dog',
@@ -35,17 +37,17 @@ function load() {
     }];
     localStorage.setItem('taskStorage', JSON.stringify(listArray));
   }
-    const headerContainer = document.querySelector('#refresh');
-    const refreshButton = document.createElement('img');
-    const enterButton = document.querySelector('.enter-btn');
-    const imgEnterButton = document.createElement('img');
-    refreshButton.src = refreshIcon;
-    refreshButton.alt = '';
-    refreshButton.classList.add('refresh-img');
-    headerContainer.appendChild(refreshButton);
-    imgEnterButton.src = enterIcon;
-    imgEnterButton.classList.add('enter-img');
-    enterButton.appendChild(imgEnterButton);
+  const headerContainer = document.querySelector('#refresh');
+  const refreshButton = document.createElement('img');
+  const enterButton = document.querySelector('.enter-btn');
+  const imgEnterButton = document.createElement('img');
+  refreshButton.src = refreshIcon;
+  refreshButton.alt = '';
+  refreshButton.classList.add('refresh-img');
+  headerContainer.appendChild(refreshButton);
+  imgEnterButton.src = enterIcon;
+  imgEnterButton.classList.add('enter-img');
+  enterButton.appendChild(imgEnterButton);
 
   for (let i = 0; i < listArray.length; i += 1) {
     if ((listArray[i].index) === (i + 1)) {
@@ -72,16 +74,16 @@ function load() {
   }
 }
 
-//Check task function
+// Check task function
 
 function checkTask(checkedId) {
-  const checkBox = document.querySelector(`.${checkedId}`)
+  const checkBox = document.querySelector(`.${checkedId}`);
   checkBox.classList.toggle('checked-description');
 }
 
-document.body.addEventListener('click', event => {
-  if(event.target.type === 'checkbox') {
+document.body.addEventListener('click', (event) => {
+  if (event.target.type === 'checkbox') {
     checkTask(event.target.id);
   }
-})
+});
 window.addEventListener('DOMContentLoaded', load);
