@@ -66,6 +66,10 @@ input::placeholder {
   margin-left: auto;
 }
 
+.refresh-img {
+  cursor: pointer;
+}
+
 #refresh > img {
   height: 20px;
   width: 20px;
@@ -117,6 +121,7 @@ input::placeholder {
   margin-left: auto;
   height: 20px;
   width: 20px;
+  cursor: move;
 }
 
 .description::placeholder,
@@ -129,10 +134,22 @@ input::placeholder {
   border: none;
 }
 
+.checked-description,
+.checked-description::placeholder {
+  padding: 15px 0px;
+  line-height: 20px;
+  margin-top: 3px;
+  color: rgb(182, 182, 182);
+  outline: none;
+  border: none;
+  text-decoration:line-through;
+}
+
 .form-check {
   padding: 0;
   display: flex;
   margin: 0px 10px;
+  cursor: pointer;
 }
 
 .button-container {

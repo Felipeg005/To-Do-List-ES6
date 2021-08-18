@@ -13,7 +13,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html', inject: 'body'
+      template: './src/index.html'
     }),
   ],
   module: {

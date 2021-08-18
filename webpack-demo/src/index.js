@@ -40,13 +40,15 @@ function load() {
     const enterButton = document.querySelector('.enter-btn');
     const imgEnterButton = document.createElement('img');
     refreshButton.src = refreshIcon;
+    refreshButton.alt = '';
+    refreshButton.classList.add('refresh-img');
     headerContainer.appendChild(refreshButton);
     imgEnterButton.src = enterIcon;
     imgEnterButton.classList.add('enter-img');
     enterButton.appendChild(imgEnterButton);
 
-    for (let i = 0; i < listArray.length; i += 1) {
-      if ((listArray[i].index) === (i + 1)) {
+  for (let i = 0; i < listArray.length; i += 1) {
+    if ((listArray[i].index) === (i + 1)) {
       const listContainer = document.querySelector('.list-items');
       const listElement = document.createElement('li');
       listElement.classList.add('list-element');
@@ -57,8 +59,8 @@ function load() {
       const moveButton = document.createElement('img');
       checkButtonDiv.classList.add('form-check');
       checkInput.setAttribute('type', 'checkbox');
-      checkInput.id = 'input-checkbox';
-      description.classList.add('description');
+      checkInput.id = `input-checkbox${i + 1}`;
+      description.classList.add('description', `input-checkbox${i + 1}`);
       description.placeholder = listArray[i].description;
       moveButton.src = optionsIcon;
       moveButton.classList.add('move-button');
@@ -66,21 +68,20 @@ function load() {
       listElement.appendChild(description);
       listElement.appendChild(moveButton);
       checkButtonDiv.appendChild(checkInput);
-    }}
+    }
   }
+}
 
+//Check task function
+
+function checkTask(checkedId) {
+  const checkBox = document.querySelector(`.${checkedId}`)
+  checkBox.classList.toggle('checked-description');
+}
+
+document.body.addEventListener('click', event => {
+  if(event.target.type === 'checkbox') {
+    checkTask(event.target.id);
+  }
+})
 window.addEventListener('DOMContentLoaded', load);
-
-// Check task function
-// const checkBox = document.querySelector('.input-checkbox');
-
-// function checkTask() {
-//   const formCheckDiv = document.querySelector('.form-check');
-//   const checkedContainer = document.createElement('div');
-//   checkBox.classList.toggle('hide');
-//   formCheckDiv.appendChild(checkedContainer);
-
-//   console.log('check');
-// }
-
-// checkBox.addEventListener('click', checkTask);
