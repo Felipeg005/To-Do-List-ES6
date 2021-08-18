@@ -1,4 +1,5 @@
 {
+  "homepage":"https://felipeg005.github.io/To-Do-List-ES6/",
   "name": "webpack-demo",
   "version": "1.0.0",
   "description": "",
@@ -7,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
     "build": "webpack",
-    "deploy": "gh-pages -d dist -b structure"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
