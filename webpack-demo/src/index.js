@@ -1,4 +1,3 @@
-/*eslint no-restricted-imports: ["error", "lodash"]*/
 import _ from 'lodash';
 import './style.css';
 import optionsIcon from './imgs/app_screenshot.png';
@@ -23,8 +22,7 @@ function add() {
 document.getElementById('form').addEventListener('submit', add);
 
 function load() {
-  // eslint-disable-next-line no-undef
-  if (!(listArray = JSON.parse(localStorage.getItem('taskStorage')))) {
+  if (!(listArray = JSON.parse(localStorage.getItem('taskStorage')))) { // eslint-disable-line no-use-before-define
     listArray = [{
       description: 'Take a walk with the dog',
       completed: false,
