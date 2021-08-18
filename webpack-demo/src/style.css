@@ -119,11 +119,14 @@ input::placeholder {
   width: 20px;
 }
 
+.description::placeholder,
 .description {
   padding: 15px 0px;
   line-height: 20px;
   margin-top: 3px;
   color: black;
+  outline: none;
+  border: none;
 }
 
 .form-check {
@@ -146,11 +149,13 @@ input::placeholder {
 }
 
 .clear-btn,
-.clear-btn:hover {
-  border: none;
+.clear-btn:hover,
+.clear-btn:active,
+.clear-btn:focus {
+  border: transparent;
   background-color: transparent;
   color: rgb(148, 148, 148);
   width: 100%;
-  outline: none;
+  outline: transparent;
 }
 
