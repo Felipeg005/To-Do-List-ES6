@@ -255,7 +255,7 @@ eval("module.exports = __webpack_require__.p + \"e043b97ee41f37846a5a.png\";\n\n
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "/TO-DO-LIST-ES6/";
+/******/ 		__webpack_require__.p = "https://felipeg005.github.io/To-Do-List-ES6/";
 /******/ 	})();
 /******/ 	
 /************************************************************************/

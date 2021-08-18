@@ -10,7 +10,7 @@ module.exports = {
   output: {
     filename: 'main.bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: "/TO-DO-LIST-ES6/",
+    publicPath: 'https://felipeg005.github.io/To-Do-List-ES6/',
   },
   plugins: [
     new HtmlWebpackPlugin({
