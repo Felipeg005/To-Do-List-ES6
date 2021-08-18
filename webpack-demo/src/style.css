@@ -153,16 +153,16 @@ input::placeholder {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(246,246,246);
+  background-color: rgb(246, 246, 246);
 }
 
 .button-container:active {
   background-color: rgb(221, 220, 220);
 }
 
-.clear-btn, 
-.clear-btn:hover, 
-.clear-btn:active, 
+.clear-btn,
+.clear-btn:hover,
+.clear-btn:active,
 .clear-btn:focus {
   border: transparent;
   background-color: transparent;

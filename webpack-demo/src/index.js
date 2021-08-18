@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-undef
+/*eslint no-restricted-imports: ["error", "lodash"]*/
 import _ from 'lodash';
 import './style.css';
 import optionsIcon from './imgs/app_screenshot.png';

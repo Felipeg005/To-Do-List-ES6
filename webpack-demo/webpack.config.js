@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-undef
+/*eslint no-restricted-imports: ["error", "html-webpack-plugin"]*/
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
