@@ -1,8 +1,9 @@
 /* eslint-disable-line */import _ from 'lodash';
-import './style.css';
-import optionsIcon from './imgs/app_screenshot.png';
-import refreshIcon from './imgs/1024px-Refresh_icon.png';
-import enterIcon from './imgs/Enter-icon.png';
+import '../style.css';
+import optionsIcon from '../imgs/app_screenshot.png';
+import refreshIcon from '../imgs/1024px-Refresh_icon.png';
+import enterIcon from '../imgs/Enter-icon.png';
+import { checkTask } from './modules/check-status';
 
 let listArray = [];
 
@@ -11,6 +12,7 @@ let listArray = [];
 function add() {
   const newInput = document.getElementById('new-item');
   const newTask = {
+    id: `input-checkbox${listArray.length + 1}`,
     description: `${newInput.value}`,
     completed: false,
     index: listArray.length + 1,
@@ -25,11 +27,13 @@ function load() {
 /* eslint-disable-next-line */
   if (!(listArray = JSON.parse(localStorage.getItem('taskStorage')))) {
     listArray = [{
+      id: 'input-checkbox1',
       description: 'Take a walk with the dog',
       completed: false,
       index: 1,
     },
     {
+      id: 'input-checkbox2',
       description: 'Do my homework',
       completed: false,
       index: 2,
@@ -49,7 +53,7 @@ function load() {
   enterButton.appendChild(imgEnterButton);
 
   for (let i = 0; i < listArray.length; i += 1) {
-    if ((listArray[i].index) === (i + 1)) {
+    if (((listArray[i].index) === (i + 1)) && (listArray[i].completed === false)) {
       const listContainer = document.querySelector('.list-items');
       const listElement = document.createElement('li');
       listElement.classList.add('list-element');
@@ -69,15 +73,29 @@ function load() {
       listElement.appendChild(description);
       listElement.appendChild(moveButton);
       checkButtonDiv.appendChild(checkInput);
+    } else if (listArray[i].completed === true) {
+      const listContainer = document.querySelector('.list-items');
+      const listElement = document.createElement('li');
+      listElement.classList.add('list-element');
+      listContainer.appendChild(listElement);
+      const checkButtonDiv = document.createElement('div');
+      const checkInput = document.createElement('input');
+      const description = document.createElement('input');
+      const moveButton = document.createElement('img');
+      checkButtonDiv.classList.add('form-check');
+      checkInput.setAttribute('type', 'checkbox');
+      checkInput.id = `input-checkbox${i + 1}`;
+      description.classList.add('description', `input-checkbox${i + 1}`);
+      description.placeholder = listArray[i].description;
+      moveButton.src = optionsIcon;
+      moveButton.classList.add('move-button');
+      listElement.appendChild(checkButtonDiv);
+      listElement.appendChild(description);
+      listElement.appendChild(moveButton);
+      checkButtonDiv.appendChild(checkInput);
+      document.querySelector(`.${listArray[i].id}`).classList.toggle('checked-description');
     }
   }
-}
-
-// Check task function
-
-function checkTask(checkedId) {
-  const checkBox = document.querySelector(`.${checkedId}`);
-  checkBox.classList.toggle('checked-description');
 }
 
 document.body.addEventListener('click', (event) => {
