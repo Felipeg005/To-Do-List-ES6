@@ -6,6 +6,7 @@ import enterIcon from '../imgs/Enter-icon.png';
 import checkTask from './modules/check-status';
 import add from './modules/add';
 import editDescription from './modules/edit-description';
+import clear from './modules/clear';
 
 let listArray = [];
 
@@ -28,7 +29,7 @@ const load = () => {
   enterButton.appendChild(imgEnterButton);
 
   for (let i = 0; i < listArray.length; i += 1) {
-    if (((listArray[i].index) === (i + 1)) && (listArray[i].completed === false)) {
+    if ((listArray[i].completed === false)) {
       const listContainer = document.querySelector('.list-items');
       const listElement = document.createElement('li');
       listElement.classList.add('list-element');
@@ -61,6 +62,7 @@ const load = () => {
       checkButtonDiv.classList.add('form-check');
       checkInput.setAttribute('type', 'checkbox');
       checkInput.id = `input-checkbox${i + 1}`;
+      description.id = `input-text${i + 1}`;
       description.classList.add('description', `input-checkbox${i + 1}`);
       description.placeholder = listArray[i].description;
       moveButton.src = optionsIcon;
@@ -81,6 +83,9 @@ document.getElementById('form').addEventListener('submit', add);
 document.body.addEventListener('click', (event) => {
   if (event.target.type === 'checkbox') {
     checkTask(event.target.id);
+  }
+  if (`${event.target.className}` === 'clear-btn'){
+    clear();
   }
 });
 window.addEventListener('DOMContentLoaded', () => {
