@@ -5,7 +5,8 @@ const add = () => {
   }
   const newInput = document.getElementById('new-item');
   const newTask = {
-    id: `input-checkbox${listArray.length + 1}`,
+    idInput: `input-text${listArray.length + 1}`,
+    idCheckbox: `input-checkbox${listArray.length + 1}`,
     description: `${newInput.value}`,
     completed: false,
     index: listArray.length + 1,

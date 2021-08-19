@@ -5,25 +5,9 @@ import refreshIcon from '../imgs/1024px-Refresh_icon.png';
 import enterIcon from '../imgs/Enter-icon.png';
 import checkTask from './modules/check-status';
 import add from './modules/add';
+import editDescription from './modules/edit-description';
 
 let listArray = [];
-
-// Add new task
-
-// const add = () => {
-//   const newInput = document.getElementById('new-item');
-//   const newTask = {
-//     id: `input-checkbox${listArray.length + 1}`,
-//     description: `${newInput.value}`,
-//     completed: false,
-//     index: listArray.length + 1,
-//   };
-//   listArray.push(newTask);
-//   localStorage.setItem('taskStorage', JSON.stringify(listArray));
-// };
-
-// document.getElementById('form').addEventListener('submit', add);
-document.getElementById('form').addEventListener('submit', add);
 
 const load = () => {
 /* eslint-disable-next-line */
@@ -56,6 +40,7 @@ const load = () => {
       checkButtonDiv.classList.add('form-check');
       checkInput.setAttribute('type', 'checkbox');
       checkInput.id = `input-checkbox${i + 1}`;
+      description.id = `input-text${i + 1}`;
       description.classList.add('description', `input-checkbox${i + 1}`);
       description.placeholder = listArray[i].description;
       moveButton.src = optionsIcon;
@@ -84,15 +69,20 @@ const load = () => {
       listElement.appendChild(description);
       listElement.appendChild(moveButton);
       checkButtonDiv.appendChild(checkInput);
-      document.querySelector(`.${listArray[i].id}`).classList.toggle('checked-description');
+      document.querySelector(`.${listArray[i].idCheckbox}`).classList.toggle('checked-description');
     }
   }
 };
 
+document.body.addEventListener ('keydown', (event) => {
+  editDescription(event.target.id);
+});
+document.getElementById('form').addEventListener('submit', add);
 document.body.addEventListener('click', (event) => {
-  console.log(event.target);
   if (event.target.type === 'checkbox') {
     checkTask(event.target.id);
   }
 });
-window.addEventListener('DOMContentLoaded', load);
+window.addEventListener('DOMContentLoaded', () => {
+  load();
+});
