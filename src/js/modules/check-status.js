@@ -1,5 +1,5 @@
 // Check task function
-export default function checkTask(checkedId) {
+export let checkTask = (checkedId) => {
   const listArray = JSON.parse(localStorage.getItem('taskStorage'));
   const checkBox = document.querySelector(`.${checkedId}`);
   checkBox.classList.toggle('checked-description');

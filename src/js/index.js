@@ -3,13 +3,13 @@ import '../style.css';
 import optionsIcon from '../imgs/app_screenshot.png';
 import refreshIcon from '../imgs/1024px-Refresh_icon.png';
 import enterIcon from '../imgs/Enter-icon.png';
-import checkTask from './modules/check-status';
+import {checkTask} from './modules/check-status';
 
 let listArray = [];
 
 // Add new task
 
-function add() {
+let add = () => {
   const newInput = document.getElementById('new-item');
   const newTask = {
     id: `input-checkbox${listArray.length + 1}`,
@@ -23,7 +23,7 @@ function add() {
 
 document.getElementById('form').addEventListener('submit', add);
 
-function load() {
+let load = () => {
 /* eslint-disable-next-line */
   if (!(listArray = JSON.parse(localStorage.getItem('taskStorage')))) {
     listArray = [{
