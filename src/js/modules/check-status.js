@@ -1,12 +1,10 @@
 // Check task function
-
-export function checkTask(checkedId) {
-  let listArray = JSON.parse(localStorage.getItem('taskStorage'));
+export default function checkTask(checkedId) {
+  const listArray = JSON.parse(localStorage.getItem('taskStorage'));
   const checkBox = document.querySelector(`.${checkedId}`);
   checkBox.classList.toggle('checked-description');
-  
   for (let i = 0; i < listArray.length; i += 1) {
-    if((`${listArray[i].id}` === `${checkedId}`) /* && (listArray[i].completed !== true)*/) {
+    if ((`${listArray[i].id}` === `${checkedId}`)) {
       if (listArray[i].completed === false) {
         listArray[i].completed = true;
         localStorage.setItem('taskStorage', JSON.stringify(listArray));
@@ -17,4 +15,3 @@ export function checkTask(checkedId) {
     }
   }
 }
-  

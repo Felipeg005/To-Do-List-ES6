@@ -3,7 +3,7 @@ import '../style.css';
 import optionsIcon from '../imgs/app_screenshot.png';
 import refreshIcon from '../imgs/1024px-Refresh_icon.png';
 import enterIcon from '../imgs/Enter-icon.png';
-import { checkTask } from './modules/check-status';
+import checkTask from './modules/check-status';
 
 let listArray = [];
 
