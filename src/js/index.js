@@ -30,6 +30,12 @@ const load = () => {
 
   for (let i = 0; i < listArray.length; i += 1) {
     if ((listArray[i].completed === false)) {
+      if(listArray[i].index > i) {
+        listArray[i].idInput = `input-text${i + 1}`
+        listArray[i].idCheckbox = `input-checkbox${i + 1}`
+        listArray[i].index = i + 1;
+        localStorage.setItem('taskStorage', JSON.stringify(listArray));
+      }
       const listContainer = document.querySelector('.list-items');
       const listElement = document.createElement('li');
       listElement.classList.add('list-element');
@@ -51,6 +57,12 @@ const load = () => {
       listElement.appendChild(moveButton);
       checkButtonDiv.appendChild(checkInput);
     } else if (listArray[i].completed === true) {
+      if(listArray[i].index > i) {
+        listArray[i].idInput = `input-text${i + 1}`
+        listArray[i].idCheckbox = `input-checkbox${i + 1}`
+        listArray[i].index = i + 1;
+        localStorage.setItem('taskStorage', JSON.stringify(listArray));
+      }
       const listContainer = document.querySelector('.list-items');
       const listElement = document.createElement('li');
       listElement.classList.add('list-element');
