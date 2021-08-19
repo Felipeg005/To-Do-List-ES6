@@ -4,40 +4,31 @@ import optionsIcon from '../imgs/app_screenshot.png';
 import refreshIcon from '../imgs/1024px-Refresh_icon.png';
 import enterIcon from '../imgs/Enter-icon.png';
 import checkTask from './modules/check-status';
+import add from './modules/add';
 
 let listArray = [];
 
 // Add new task
 
-const add = () => {
-  const newInput = document.getElementById('new-item');
-  const newTask = {
-    id: `input-checkbox${listArray.length + 1}`,
-    description: `${newInput.value}`,
-    completed: false,
-    index: listArray.length + 1,
-  };
-  listArray.push(newTask);
-  localStorage.setItem('taskStorage', JSON.stringify(listArray));
-};
+// const add = () => {
+//   const newInput = document.getElementById('new-item');
+//   const newTask = {
+//     id: `input-checkbox${listArray.length + 1}`,
+//     description: `${newInput.value}`,
+//     completed: false,
+//     index: listArray.length + 1,
+//   };
+//   listArray.push(newTask);
+//   localStorage.setItem('taskStorage', JSON.stringify(listArray));
+// };
 
+// document.getElementById('form').addEventListener('submit', add);
 document.getElementById('form').addEventListener('submit', add);
 
 const load = () => {
 /* eslint-disable-next-line */
   if (!(listArray = JSON.parse(localStorage.getItem('taskStorage')))) {
-    listArray = [{
-      id: 'input-checkbox1',
-      description: 'Take a walk with the dog',
-      completed: false,
-      index: 1,
-    },
-    {
-      id: 'input-checkbox2',
-      description: 'Do my homework',
-      completed: false,
-      index: 2,
-    }];
+    listArray = [];
     localStorage.setItem('taskStorage', JSON.stringify(listArray));
   }
   const headerContainer = document.querySelector('#refresh');
@@ -99,6 +90,7 @@ const load = () => {
 };
 
 document.body.addEventListener('click', (event) => {
+  console.log(event.target);
   if (event.target.type === 'checkbox') {
     checkTask(event.target.id);
   }
