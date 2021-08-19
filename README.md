@@ -22,6 +22,10 @@ To get a local copy up and running follow these simple example steps
 
 - Browser (Chrome,Firefoxe,IE,Opera,Safari)
 
+### Set-up & Install
+
+- Please install npm and webpack to run this build
+
 ### Usage
 
 - Open Html.index file with your browser
