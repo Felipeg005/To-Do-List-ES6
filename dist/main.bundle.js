@@ -16,7 +16,7 @@
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"body {\\n  background-color: bisque;\\n}\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://webpack-demo/./src/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"body {\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n}\\n\\np {\\n  margin: 0;\\n  padding: 0;\\n}\\n\\nli {\\n  list-style-type: none;\\n}\\n\\n.hide {\\n  display: none;\\n}\\n\\ninput::placeholder {\\n  color: rgb(148, 148, 148);\\n}\\n\\n.list-header {\\n  display: flex;\\n  flex-direction: row;\\n  align-items: center;\\n}\\n\\n.list-title {\\n  margin: 0;\\n  font-weight: 400;\\n  font-size: 17px;\\n}\\n\\n.header-container {\\n  width: 50%;\\n  margin: 40px 0 0 0;\\n  padding: 10px;\\n  border: 1px solid rgb(211, 211, 211);\\n}\\n\\n.enter-btn {\\n  border: none;\\n  background-color: transparent;\\n  outline: none;\\n}\\n\\n.enter-btn:hover {\\n  border: none;\\n  background-color: transparent;\\n  outline: none;\\n}\\n\\n.enter-img {\\n  width: 12px;\\n  height: 12px;\\n}\\n\\n#refresh {\\n  margin-left: auto;\\n}\\n\\n.refresh-img {\\n  cursor: pointer;\\n}\\n\\n#refresh > img {\\n  height: 20px;\\n  width: 20px;\\n}\\n\\n.list-container {\\n  width: 50%;\\n  border: 1px solid rgb(211, 211, 211);\\n}\\n\\n.add-new {\\n  padding: 0;\\n  margin-bottom: 0;\\n  border-bottom: 1px solid rgb(211, 211, 211);\\n}\\n\\n.form {\\n  display: flex;\\n  padding: 15px 10px;\\n  line-height: 20px;\\n  margin-top: 3px;\\n}\\n\\n#new-item,\\n#new-item:hover,\\n#new-item:focus {\\n  margin-left: 10px;\\n  width: 100%;\\n  border: none;\\n  outline: none;\\n  font-style: italic;\\n}\\n\\n.list-items {\\n  padding: 0;\\n  margin-bottom: 0;\\n  border-bottom: 1px solid rgb(211, 211, 211);\\n}\\n\\n.list-element {\\n  display: flex;\\n  flex-direction: row;\\n  align-items: center;\\n  padding: 5px;\\n  border-bottom: 1px solid rgb(211, 211, 211);\\n}\\n\\n.move-button {\\n  margin-left: auto;\\n  height: 20px;\\n  width: 20px;\\n  cursor: move;\\n}\\n\\n.description::placeholder,\\n.description {\\n  padding: 15px 0;\\n  line-height: 20px;\\n  margin-top: 3px;\\n  color: black;\\n  outline: none;\\n  border: none;\\n}\\n\\n.checked-description,\\n.checked-description::placeholder {\\n  padding: 15px 0;\\n  line-height: 20px;\\n  margin-top: 3px;\\n  color: rgb(182, 182, 182);\\n  outline: none;\\n  border: none;\\n  text-decoration: line-through;\\n}\\n\\n.form-check {\\n  padding: 0;\\n  display: flex;\\n  margin: 0 10px;\\n  cursor: pointer;\\n}\\n\\n.button-container {\\n  padding: 15px;\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: center;\\n  align-items: center;\\n  background-color: rgb(246, 246, 246);\\n}\\n\\n.button-container:active {\\n  background-color: rgb(221, 220, 220);\\n}\\n\\n.clear-btn,\\n.clear-btn:hover,\\n.clear-btn:active,\\n.clear-btn:focus {\\n  border: transparent;\\n  background-color: transparent;\\n  color: rgb(148, 148, 148);\\n  width: 100%;\\n  outline: transparent;\\n}\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://webpack-demo/./src/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -125,7 +125,40 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, style) {\
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n\nfunction component() {\n  const element = document.createElement('div');\n\n  // Lodash, now imported by this script\n  element.innerHTML = lodash__WEBPACK_IMPORTED_MODULE_0___default().join(['Hello', 'webpack'], ' ');\n  element.classList.add('hello');\n  \n  return element;\n}\n\ndocument.body.appendChild(component());\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _imgs_app_screenshot_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./imgs/app_screenshot.png */ \"./src/imgs/app_screenshot.png\");\n/* harmony import */ var _imgs_1024px_Refresh_icon_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./imgs/1024px-Refresh_icon.png */ \"./src/imgs/1024px-Refresh_icon.png\");\n/* harmony import */ var _imgs_Enter_icon_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./imgs/Enter-icon.png */ \"./src/imgs/Enter-icon.png\");\n/* eslint-disable-line */\n\n\n\n\n\nlet listArray = [];\n\n// Add new task\n\nfunction add() {\n  const newInput = document.getElementById('new-item');\n  const newTask = {\n    description: `${newInput.value}`,\n    completed: false,\n    index: listArray.length + 1,\n  };\n  listArray.push(newTask);\n  localStorage.setItem('taskStorage', JSON.stringify(listArray));\n}\n\ndocument.getElementById('form').addEventListener('submit', add);\n\nfunction load() {\n/* eslint-disable-next-line */\n  if (!(listArray = JSON.parse(localStorage.getItem('taskStorage')))) {\n    listArray = [{\n      description: 'Take a walk with the dog',\n      completed: false,\n      index: 1,\n    },\n    {\n      description: 'Do my homework',\n      completed: false,\n      index: 2,\n    }];\n    localStorage.setItem('taskStorage', JSON.stringify(listArray));\n  }\n  const headerContainer = document.querySelector('#refresh');\n  const refreshButton = document.createElement('img');\n  const enterButton = document.querySelector('.enter-btn');\n  const imgEnterButton = document.createElement('img');\n  refreshButton.src = _imgs_1024px_Refresh_icon_png__WEBPACK_IMPORTED_MODULE_3__;\n  refreshButton.alt = '';\n  refreshButton.classList.add('refresh-img');\n  headerContainer.appendChild(refreshButton);\n  imgEnterButton.src = _imgs_Enter_icon_png__WEBPACK_IMPORTED_MODULE_4__;\n  imgEnterButton.classList.add('enter-img');\n  enterButton.appendChild(imgEnterButton);\n\n  for (let i = 0; i < listArray.length; i += 1) {\n    if ((listArray[i].index) === (i + 1)) {\n      const listContainer = document.querySelector('.list-items');\n      const listElement = document.createElement('li');\n      listElement.classList.add('list-element');\n      listContainer.appendChild(listElement);\n      const checkButtonDiv = document.createElement('div');\n      const checkInput = document.createElement('input');\n      const description = document.createElement('input');\n      const moveButton = document.createElement('img');\n      checkButtonDiv.classList.add('form-check');\n      checkInput.setAttribute('type', 'checkbox');\n      checkInput.id = `input-checkbox${i + 1}`;\n      description.classList.add('description', `input-checkbox${i + 1}`);\n      description.placeholder = listArray[i].description;\n      moveButton.src = _imgs_app_screenshot_png__WEBPACK_IMPORTED_MODULE_2__;\n      moveButton.classList.add('move-button');\n      listElement.appendChild(checkButtonDiv);\n      listElement.appendChild(description);\n      listElement.appendChild(moveButton);\n      checkButtonDiv.appendChild(checkInput);\n    }\n  }\n}\n\n// Check task function\n\nfunction checkTask(checkedId) {\n  const checkBox = document.querySelector(`.${checkedId}`);\n  checkBox.classList.toggle('checked-description');\n}\n\ndocument.body.addEventListener('click', (event) => {\n  if (event.target.type === 'checkbox') {\n    checkTask(event.target.id);\n  }\n});\nwindow.addEventListener('DOMContentLoaded', load);\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/imgs/1024px-Refresh_icon.png":
+/*!******************************************!*\
+  !*** ./src/imgs/1024px-Refresh_icon.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0b9c68a00b9710e63a51.png\";\n\n//# sourceURL=webpack://webpack-demo/./src/imgs/1024px-Refresh_icon.png?");
+
+/***/ }),
+
+/***/ "./src/imgs/Enter-icon.png":
+/*!*********************************!*\
+  !*** ./src/imgs/Enter-icon.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"a53ac81e146b19d42277.png\";\n\n//# sourceURL=webpack://webpack-demo/./src/imgs/Enter-icon.png?");
+
+/***/ }),
+
+/***/ "./src/imgs/app_screenshot.png":
+/*!*************************************!*\
+  !*** ./src/imgs/app_screenshot.png ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e043b97ee41f37846a5a.png\";\n\n//# sourceURL=webpack://webpack-demo/./src/imgs/app_screenshot.png?");
 
 /***/ })
 
@@ -218,6 +251,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var loda
 /******/ 			if (!module.children) module.children = [];
 /******/ 			return module;
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
