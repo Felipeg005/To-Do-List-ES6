@@ -7,6 +7,8 @@ import checkTask from './modules/check-status';
 import add from './modules/add';
 import editDescription from './modules/edit-description';
 import clear from './modules/clear';
+import showDeleteBtn from './modules/show-delete';
+import deleteElement from './modules/delete';
 
 let listArray = [];
 
@@ -31,6 +33,7 @@ const load = () => {
   for (let i = 0; i < listArray.length; i += 1) {
     if ((listArray[i].completed === false)) {
       if(listArray[i].index > i) {
+        listArray[i].idContainer = `list-element move-button${i + 1}`;
         listArray[i].idInput = `input-text${i + 1}`
         listArray[i].idCheckbox = `input-checkbox${i + 1}`
         listArray[i].index = i + 1;
@@ -38,7 +41,7 @@ const load = () => {
       }
       const listContainer = document.querySelector('.list-items');
       const listElement = document.createElement('li');
-      listElement.classList.add('list-element');
+      listElement.classList.add('list-element', `move-button${i + 1}`);
       listContainer.appendChild(listElement);
       const checkButtonDiv = document.createElement('div');
       const checkInput = document.createElement('input');
@@ -52,20 +55,22 @@ const load = () => {
       description.placeholder = listArray[i].description;
       moveButton.src = optionsIcon;
       moveButton.classList.add('move-button');
+      moveButton.id = `move-button${i + 1}`;
       listElement.appendChild(checkButtonDiv);
       listElement.appendChild(description);
       listElement.appendChild(moveButton);
       checkButtonDiv.appendChild(checkInput);
     } else if (listArray[i].completed === true) {
       if(listArray[i].index > i) {
-        listArray[i].idInput = `input-text${i + 1}`
-        listArray[i].idCheckbox = `input-checkbox${i + 1}`
+        listArray[i].idContainer = `list-element move-button${i + 1}`;
+        listArray[i].idInput = `input-text${i + 1}`;
+        listArray[i].idCheckbox = `input-checkbox${i + 1}`;
         listArray[i].index = i + 1;
         localStorage.setItem('taskStorage', JSON.stringify(listArray));
       }
       const listContainer = document.querySelector('.list-items');
       const listElement = document.createElement('li');
-      listElement.classList.add('list-element');
+      listElement.classList.add('list-element', `move-button${i + 1}`);
       listContainer.appendChild(listElement);
       const checkButtonDiv = document.createElement('div');
       const checkInput = document.createElement('input');
@@ -79,6 +84,7 @@ const load = () => {
       description.placeholder = listArray[i].description;
       moveButton.src = optionsIcon;
       moveButton.classList.add('move-button');
+      moveButton.id = `move-button${i + 1}`;
       listElement.appendChild(checkButtonDiv);
       listElement.appendChild(description);
       listElement.appendChild(moveButton);
@@ -99,6 +105,13 @@ document.body.addEventListener('click', (event) => {
   if (`${event.target.className}` === 'clear-btn'){
     clear();
   }
+  if (`${event.target.className}` === 'move-button'){
+    showDeleteBtn(event.target.id);
+  }
+  if (`${event.target.className}` === 'delete-button'){
+    deleteElement(event.target.parentNode);
+  }
+ console.log(event.target.className);
 });
 window.addEventListener('DOMContentLoaded', () => {
   load();

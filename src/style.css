@@ -123,6 +123,7 @@ input::placeholder {
 
 .description::placeholder,
 .description {
+  width: 80%;
   padding: 15px 0;
   line-height: 20px;
   margin-top: 3px;
@@ -133,6 +134,7 @@ input::placeholder {
 
 .checked-description,
 .checked-description::placeholder {
+  width: 80%;
   padding: 15px 0;
   line-height: 20px;
   margin-top: 3px;
