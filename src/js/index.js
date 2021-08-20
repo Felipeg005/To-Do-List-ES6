@@ -4,40 +4,18 @@ import optionsIcon from '../imgs/app_screenshot.png';
 import refreshIcon from '../imgs/1024px-Refresh_icon.png';
 import enterIcon from '../imgs/Enter-icon.png';
 import checkTask from './modules/check-status';
+import add from './modules/add';
+import editDescription from './modules/edit-description';
+import clear from './modules/clear';
+import showDeleteBtn from './modules/show-delete';
+import deleteElement from './modules/delete';
 
 let listArray = [];
-
-// Add new task
-
-const add = () => {
-  const newInput = document.getElementById('new-item');
-  const newTask = {
-    id: `input-checkbox${listArray.length + 1}`,
-    description: `${newInput.value}`,
-    completed: false,
-    index: listArray.length + 1,
-  };
-  listArray.push(newTask);
-  localStorage.setItem('taskStorage', JSON.stringify(listArray));
-};
-
-document.getElementById('form').addEventListener('submit', add);
 
 const load = () => {
 /* eslint-disable-next-line */
   if (!(listArray = JSON.parse(localStorage.getItem('taskStorage')))) {
-    listArray = [{
-      id: 'input-checkbox1',
-      description: 'Take a walk with the dog',
-      completed: false,
-      index: 1,
-    },
-    {
-      id: 'input-checkbox2',
-      description: 'Do my homework',
-      completed: false,
-      index: 2,
-    }];
+    listArray = [];
     localStorage.setItem('taskStorage', JSON.stringify(listArray));
   }
   const headerContainer = document.querySelector('#refresh');
@@ -53,10 +31,17 @@ const load = () => {
   enterButton.appendChild(imgEnterButton);
 
   for (let i = 0; i < listArray.length; i += 1) {
-    if (((listArray[i].index) === (i + 1)) && (listArray[i].completed === false)) {
+    if ((listArray[i].completed === false)) {
+      if (listArray[i].index > i) {
+        listArray[i].idContainer = `list-element move-button${i + 1}`;
+        listArray[i].idInput = `input-text${i + 1}`;
+        listArray[i].idCheckbox = `input-checkbox${i + 1}`;
+        listArray[i].index = i + 1;
+        localStorage.setItem('taskStorage', JSON.stringify(listArray));
+      }
       const listContainer = document.querySelector('.list-items');
       const listElement = document.createElement('li');
-      listElement.classList.add('list-element');
+      listElement.classList.add('list-element', `move-button${i + 1}`);
       listContainer.appendChild(listElement);
       const checkButtonDiv = document.createElement('div');
       const checkInput = document.createElement('input');
@@ -65,18 +50,27 @@ const load = () => {
       checkButtonDiv.classList.add('form-check');
       checkInput.setAttribute('type', 'checkbox');
       checkInput.id = `input-checkbox${i + 1}`;
+      description.id = `input-text${i + 1}`;
       description.classList.add('description', `input-checkbox${i + 1}`);
       description.placeholder = listArray[i].description;
       moveButton.src = optionsIcon;
       moveButton.classList.add('move-button');
+      moveButton.id = `move-button${i + 1}`;
       listElement.appendChild(checkButtonDiv);
       listElement.appendChild(description);
       listElement.appendChild(moveButton);
       checkButtonDiv.appendChild(checkInput);
     } else if (listArray[i].completed === true) {
+      if (listArray[i].index > i) {
+        listArray[i].idContainer = `list-element move-button${i + 1}`;
+        listArray[i].idInput = `input-text${i + 1}`;
+        listArray[i].idCheckbox = `input-checkbox${i + 1}`;
+        listArray[i].index = i + 1;
+        localStorage.setItem('taskStorage', JSON.stringify(listArray));
+      }
       const listContainer = document.querySelector('.list-items');
       const listElement = document.createElement('li');
-      listElement.classList.add('list-element');
+      listElement.classList.add('list-element', `move-button${i + 1}`);
       listContainer.appendChild(listElement);
       const checkButtonDiv = document.createElement('div');
       const checkInput = document.createElement('input');
@@ -85,22 +79,38 @@ const load = () => {
       checkButtonDiv.classList.add('form-check');
       checkInput.setAttribute('type', 'checkbox');
       checkInput.id = `input-checkbox${i + 1}`;
+      description.id = `input-text${i + 1}`;
       description.classList.add('description', `input-checkbox${i + 1}`);
       description.placeholder = listArray[i].description;
       moveButton.src = optionsIcon;
       moveButton.classList.add('move-button');
+      moveButton.id = `move-button${i + 1}`;
       listElement.appendChild(checkButtonDiv);
       listElement.appendChild(description);
       listElement.appendChild(moveButton);
       checkButtonDiv.appendChild(checkInput);
-      document.querySelector(`.${listArray[i].id}`).classList.toggle('checked-description');
+      document.querySelector(`.${listArray[i].idCheckbox}`).classList.toggle('checked-description');
     }
   }
 };
-
+document.body.addEventListener('keydown', (event) => {
+  editDescription(event.target.id);
+});
+document.getElementById('form').addEventListener('submit', add);
 document.body.addEventListener('click', (event) => {
   if (event.target.type === 'checkbox') {
     checkTask(event.target.id);
   }
+  if (`${event.target.className}` === 'clear-btn') {
+    clear();
+  }
+  if (`${event.target.className}` === 'move-button') {
+    showDeleteBtn(event.target.id);
+  }
+  if (`${event.target.className}` === 'delete-button') {
+    deleteElement(event.target.parentNode);
+  }
 });
-window.addEventListener('DOMContentLoaded', load);
+window.addEventListener('DOMContentLoaded', () => {
+  load();
+});

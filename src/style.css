@@ -38,6 +38,7 @@ input::placeholder {
   margin: 40px 0 0 0;
   padding: 10px;
   border: 1px solid rgb(211, 211, 211);
+  box-shadow: 0 1px 5px gray;
 }
 
 .enter-btn {
@@ -73,6 +74,7 @@ input::placeholder {
 .list-container {
   width: 50%;
   border: 1px solid rgb(211, 211, 211);
+  box-shadow: 0 5px 10px gray;
 }
 
 .add-new {
@@ -112,15 +114,20 @@ input::placeholder {
   border-bottom: 1px solid rgb(211, 211, 211);
 }
 
+.delete-button {
+  cursor: pointer;
+}
+
 .move-button {
   margin-left: auto;
   height: 20px;
   width: 20px;
-  cursor: move;
+  cursor: pointer;
 }
 
 .description::placeholder,
 .description {
+  width: 80%;
   padding: 15px 0;
   line-height: 20px;
   margin-top: 3px;
@@ -131,6 +138,7 @@ input::placeholder {
 
 .checked-description,
 .checked-description::placeholder {
+  width: 80%;
   padding: 15px 0;
   line-height: 20px;
   margin-top: 3px;
