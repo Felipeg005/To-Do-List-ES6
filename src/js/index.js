@@ -32,10 +32,10 @@ const load = () => {
 
   for (let i = 0; i < listArray.length; i += 1) {
     if ((listArray[i].completed === false)) {
-      if(listArray[i].index > i) {
+      if (listArray[i].index > i) {
         listArray[i].idContainer = `list-element move-button${i + 1}`;
-        listArray[i].idInput = `input-text${i + 1}`
-        listArray[i].idCheckbox = `input-checkbox${i + 1}`
+        listArray[i].idInput = `input-text${i + 1}`;
+        listArray[i].idCheckbox = `input-checkbox${i + 1}`;
         listArray[i].index = i + 1;
         localStorage.setItem('taskStorage', JSON.stringify(listArray));
       }
@@ -61,7 +61,7 @@ const load = () => {
       listElement.appendChild(moveButton);
       checkButtonDiv.appendChild(checkInput);
     } else if (listArray[i].completed === true) {
-      if(listArray[i].index > i) {
+      if (listArray[i].index > i) {
         listArray[i].idContainer = `list-element move-button${i + 1}`;
         listArray[i].idInput = `input-text${i + 1}`;
         listArray[i].idCheckbox = `input-checkbox${i + 1}`;
@@ -93,8 +93,7 @@ const load = () => {
     }
   }
 };
-
-document.body.addEventListener ('keydown', (event) => {
+document.body.addEventListener('keydown', (event) => {
   editDescription(event.target.id);
 });
 document.getElementById('form').addEventListener('submit', add);
@@ -102,16 +101,15 @@ document.body.addEventListener('click', (event) => {
   if (event.target.type === 'checkbox') {
     checkTask(event.target.id);
   }
-  if (`${event.target.className}` === 'clear-btn'){
+  if (`${event.target.className}` === 'clear-btn') {
     clear();
   }
-  if (`${event.target.className}` === 'move-button'){
+  if (`${event.target.className}` === 'move-button') {
     showDeleteBtn(event.target.id);
   }
-  if (`${event.target.className}` === 'delete-button'){
+  if (`${event.target.className}` === 'delete-button') {
     deleteElement(event.target.parentNode);
   }
- console.log(event.target.className);
 });
 window.addEventListener('DOMContentLoaded', () => {
   load();
