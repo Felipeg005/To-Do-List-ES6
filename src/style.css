@@ -114,11 +114,15 @@ input::placeholder {
   border-bottom: 1px solid rgb(211, 211, 211);
 }
 
+.delete-button {
+  cursor: pointer;
+}
+
 .move-button {
   margin-left: auto;
   height: 20px;
   width: 20px;
-  cursor: move;
+  cursor: pointer;
 }
 
 .description::placeholder,

@@ -4,6 +4,6 @@ const clear = () => {
     return e.completed === false;
   });
   localStorage.setItem('taskStorage', JSON.stringify(trueValues));
-  location.reload();
+  /* eslint-disable-line */location.reload();
 };
 export default clear;
