@@ -14,6 +14,5 @@ const add = () => {
   };
   listArray.push(newTask);
   localStorage.setItem('taskStorage', JSON.stringify(listArray));
-  return listArray;
 };
 export default add;

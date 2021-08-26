@@ -11,6 +11,9 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -28,6 +31,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.21",
-    "node-forge": "^0.10.0"
+    "node-forge": "^0.10.0",
+    "jest": "^27.0.6"
   }
 }

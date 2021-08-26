@@ -1,4 +1,4 @@
-const add = () => {
+export const add = () => {
   let listArray = JSON.parse(localStorage.getItem('taskStorage'));
   if (!listArray) {
     listArray = [];
@@ -8,12 +8,12 @@ const add = () => {
     idContainer: `list-element move-button${listArray.length + 1}`,
     idInput: `input-text${listArray.length + 1}`,
     idCheckbox: `input-checkbox${listArray.length + 1}`,
-    description: `${newInput.value}`,
+    description: `${newInput}`,
     completed: false,
     index: listArray.length + 1,
   };
   listArray.push(newTask);
   localStorage.setItem('taskStorage', JSON.stringify(listArray));
-  return listArray;
+  return listArray.length;
 };
-export default add;
+

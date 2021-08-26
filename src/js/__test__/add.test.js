@@ -1,13 +1,16 @@
-import add from "../modules/add";
-
+import { add } from '../modules/add';
+jest.mock('../modules/add');
 
 describe('test add function', () => {
 
   describe('add', () => {
-    add();
-    // Arrange
-    test('must add li element', () => {
-      expect(document.querySelectorAll('li')).toBe(1);
+    test('must add localStorage element', () => {
+      // Arrange
+    
+      // Act
+
+      // Assert
+      expect(add()).toBe(1);
     })
   ;})
 
