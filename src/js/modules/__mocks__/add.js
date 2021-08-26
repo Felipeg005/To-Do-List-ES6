@@ -1,5 +1,3 @@
-describe()
-
 const add = () => {
   let listArray = JSON.parse(localStorage.getItem('taskStorage'));
   if (!listArray) {
@@ -16,5 +14,6 @@ const add = () => {
   };
   listArray.push(newTask);
   localStorage.setItem('taskStorage', JSON.stringify(listArray));
+  return listArray;
 };
 export default add;
