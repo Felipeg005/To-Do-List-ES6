@@ -21,12 +21,12 @@ describe('test add function', () => {
         completed: false,
         index: listArray.length + 1,
       };
+    
+      // Act
       listArray.push(newTask);
       localStorage.setItem('taskStorage', JSON.stringify(listArray));
       newInput.innerHTML += '<li>listElement</li>';
       let result = document.querySelectorAll('li');
-    
-      // Act
 
       // Assert
       expect(listArray.length).toBe(1);
@@ -35,5 +35,4 @@ describe('test add function', () => {
   ;})
 
 }) 
-
 export default add;

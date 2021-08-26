@@ -17,6 +17,8 @@ describe('test add function', () => {
         completed: false,
         index: listArray.length + 1,
       };
+
+      // Act
       listArray.push(newTask);
       const event = document.querySelector('ul');
       event.parentNode.removeChild(event);
@@ -26,7 +28,7 @@ describe('test add function', () => {
         }
       }
       let result = document.querySelectorAll('li');
-      // Act
+      
       // Assert
       expect(listArray.length).toBe(0);
       expect(result.length).toBe(0);
