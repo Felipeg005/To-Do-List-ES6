@@ -1,11 +1,11 @@
 import deleteElement from '../modules/delete';
-
 jest.mock('../modules/delete');
+
 describe('test add function', () => {
   describe('delete', () => {
     test('must delete localStorage and li element', () => {
       // Arrange
-      document.body.innerHTML = '<ul class="list-items"><li>listElement</li></ul>';
+      document.body.innerHTML = '<ul class="list-items"><li>listElement</li><li>listElement</li></ul>';
       let listArray = JSON.parse(localStorage.getItem('taskStorage'));
       if (!listArray) {
         listArray = [];
@@ -21,8 +21,10 @@ describe('test add function', () => {
 
       // Act
       listArray.push(newTask);
+      listArray.push(newTask);
       const event = document.querySelector('ul');
-      event.parentNode.removeChild(event);
+      const e = document.querySelector('li');
+      e.parentNode.removeChild(e);
       for (let i = 0; i < listArray.length; i += 1) {
         if (`${event.className}` === `${listArray[i].idContainer}`) {
           listArray.splice(i, 1);
@@ -41,8 +43,9 @@ describe('test add function', () => {
         }
       }
       // Assert
-      expect(listArray.length).toBe(0);
-      expect(result.length).toBe(0);
+      expect(listArray.length).toBe(1);
+      expect(result.length).toBe(1);
+      expect(listArray[0].index).toBe(1);
     });
   });
 });
