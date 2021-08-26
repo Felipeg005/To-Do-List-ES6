@@ -1,10 +1,13 @@
 import deleteElement from '../modules/delete';
 jest.mock('../modules/delete');
+import {storageMock} from '../modules/localStorage';
+jest.mock('../modules/localStorage');
 
 describe('test add function', () => {
   describe('delete', () => {
     test('must delete localStorage and li element', () => {
       // Arrange
+      window.localStorage = storageMock();
       document.body.innerHTML = '<ul class="list-items"><li>listElement</li><li>listElement</li></ul>';
       let listArray = JSON.parse(localStorage.getItem('taskStorage'));
       if (!listArray) {
@@ -46,6 +49,7 @@ describe('test add function', () => {
       expect(listArray.length).toBe(1);
       expect(result.length).toBe(1);
       expect(listArray[0].index).toBe(1);
+      expect(JSON.parse(localStorage.getItem('taskStorage')).length).toBe(1);
     });
   });
 });
