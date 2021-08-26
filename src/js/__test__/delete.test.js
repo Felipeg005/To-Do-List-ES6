@@ -1,4 +1,5 @@
-import { deleteElement } from '../modules/delete';
+import deleteElement from '../modules/delete';
+
 jest.mock('../modules/delete');
 describe('test add function', () => {
   describe('delete', () => {
@@ -9,11 +10,11 @@ describe('test add function', () => {
       if (!listArray) {
         listArray = [];
       }
-        const newTask = {
-        idContainer: `list-items`,
+      const newTask = {
+        idContainer: 'list-items',
         idInput: `input-text${listArray.length + 1}`,
         idCheckbox: `input-checkbox${listArray.length + 1}`,
-        description: '`${newInput}`',
+        // description: '`${newInput}`',
         completed: false,
         index: listArray.length + 1,
       };
@@ -27,12 +28,12 @@ describe('test add function', () => {
           listArray.splice(i, 1);
         }
       }
-      let result = document.querySelectorAll('li');
-      
+      const result = document.querySelectorAll('li');
+
       // Assert
       expect(listArray.length).toBe(0);
       expect(result.length).toBe(0);
-    })
-  ;})
-})
+    });
+  });
+});
 export default deleteElement;

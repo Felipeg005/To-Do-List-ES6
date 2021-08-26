@@ -1,10 +1,9 @@
-import { add } from '../modules/add';
+import add from '../modules/add';
+
 jest.mock('../modules/add');
 
 describe('test add function', () => {
-
   describe('add', () => {
-
     test('must add localStorage element', () => {
       // Arrange
       document.body.innerHTML = '<ul class="list-items"></ul>';
@@ -21,18 +20,17 @@ describe('test add function', () => {
         completed: false,
         index: listArray.length + 1,
       };
-    
+
       // Act
       listArray.push(newTask);
       localStorage.setItem('taskStorage', JSON.stringify(listArray));
       newInput.innerHTML += '<li>listElement</li>';
-      let result = document.querySelectorAll('li');
+      const result = document.querySelectorAll('li');
 
       // Assert
       expect(listArray.length).toBe(1);
       expect(result.length).toBe(1);
-    })
-  ;})
-
-}) 
+    });
+  });
+});
 export default add;

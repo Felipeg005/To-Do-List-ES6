@@ -1,3 +1,3 @@
-	const deleteElement = () => {};
-  
+const deleteElement = () => {};
+
 export default deleteElement;
