@@ -1,6 +1,7 @@
 import deleteElement from '../modules/delete';
+import storageMock from '../modules/localStorage';
+
 jest.mock('../modules/delete');
-import {storageMock} from '../modules/localStorage';
 jest.mock('../modules/localStorage');
 
 describe('test add function', () => {
@@ -14,7 +15,7 @@ describe('test add function', () => {
         listArray = [];
       }
       const newTask = {
-        idContainer: `list-items`,
+        idContainer: 'list-items',
         idInput: `input-text${listArray.length + 1}`,
         idCheckbox: `input-checkbox${listArray.length + 1}`,
         description: '',
@@ -37,12 +38,12 @@ describe('test add function', () => {
       // Update index after delete
       for (let i = 0; i < listArray.length; i += 1) {
         if (listArray[i].index > i) {
-            listArray[i].idContainer = `list-element${i + 1}`;
-            listArray[i].idInput = `input-text${i + 1}`;
-            listArray[i].idCheckbox = `input-checkbox${i + 1}`;
-            listArray[i].index = i + 1;
-            // Update local storage
-            localStorage.setItem('taskStorage', JSON.stringify(listArray));
+          listArray[i].idContainer = `list-element${i + 1}`;
+          listArray[i].idInput = `input-text${i + 1}`;
+          listArray[i].idCheckbox = `input-checkbox${i + 1}`;
+          listArray[i].index = i + 1;
+          // Update local storage
+          localStorage.setItem('taskStorage', JSON.stringify(listArray));
         }
       }
       // Assert
