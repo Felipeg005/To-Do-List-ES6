@@ -1,4 +1,3 @@
-// Mock local storage
 export default function storageMock() {
   const storage = {};
 
