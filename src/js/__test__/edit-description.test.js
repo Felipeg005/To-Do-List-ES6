@@ -33,10 +33,11 @@ describe('test edit description function', () => {
         index: 'test',
       }];
       localStorage.setItem('taskStorage', JSON.stringify(listArray));
-      
       listArray = JSON.parse(localStorage.getItem('taskStorage'));
       const inputValue = 'change description';
       const event = listArray[1].idInput;
+      
+      // Act
       for (let i = 0; i < listArray.length; i += 1) {
         if (event === 'input-text2') {
           listArray[i].description = inputValue;
@@ -44,8 +45,6 @@ describe('test edit description function', () => {
         }
       }
       listArray = JSON.parse(localStorage.getItem('taskStorage'));
-      // Act
-
 
       // Assert
       expect(listArray[1].description).toBe('change description')
