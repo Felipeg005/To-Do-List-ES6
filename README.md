@@ -49,7 +49,7 @@ npm install --save-dev webpack-dev-server
 
 ### Usage
 
-- Please run - npm run build - and then run - npm start - on the project folder.
+- Please run - npm run build - and then run - npm start - on the project folder
 
 
 👤 **Author**
